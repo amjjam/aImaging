@@ -41,7 +41,7 @@ RCAMERA::~RCAMERA(){
 
 
 /*=============================================================================
-  RIMAGE *snap(MODEL &m) - take an image of the model using the
+  RIMAGE *snap(LOS &m) - take an image of the model using the
   current camera position and orientation and return a pointer to the
   image. The caller will need to deallocate the image.
 
@@ -51,7 +51,7 @@ RCAMERA::~RCAMERA(){
   communicator was not a duplicate then the image communicator will
   not be a duplicate either.
   ============================================================================*/
-RIMAGE *RCAMERA::snap(MODEL &model){
+RIMAGE *RCAMERA::snap(LOS &model){
   RIMAGE *d;
   if(duplicateCommunicator)
     d=new RIMAGE(nX,nY,comm,root);

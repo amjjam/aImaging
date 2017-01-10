@@ -16,7 +16,7 @@ public:
   RCAMERA(double T, double P, int nX, int nY, MPI_Comm comm);
   RCAMERA(MPI_Comm comm, double T, double P, int nX, int nY);
   ~RCAMERA();
-  virtual RIMAGE *snap(MODEL &m);
+  virtual RIMAGE *snap(LOS &m);
   aVec direction(double i, double j, int c=1);
 private:
   double T,P;

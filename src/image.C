@@ -461,7 +461,7 @@ int IMAGE::zreadData(gzFile fp){
   void initialize(int N, MPI_Comm comm, int root) - initialization
   ============================================================================*/
 void IMAGE::initialize(int N, MPI_Comm comm, int root){
-  IMAGE::N;
+  IMAGE::N=N;
   IMAGE::comm=comm;
   IMAGE::root=root;
   MPI_Comm_size(comm,&comm_size);
@@ -476,12 +476,8 @@ void IMAGE::initialize(int N, MPI_Comm comm, int root){
   specified rank.
   ============================================================================*/
 int IMAGE::nIndex(int rank) const{
-  aVec pos;
-  double roll,pitch,yaw;
-  bool duplicateCommunicator;
-  int comm_size;
-  int root;
-};
+  return (N+comm_size-1-rank)/comm_size;
+}
 
 
 /*=============================================================================

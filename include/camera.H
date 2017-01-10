@@ -8,7 +8,7 @@
 
 #include <aVec.H>
 #include <aTime.H>
-#include "model.H"
+#include "los.H"
 #include "image.H"
 
 class CAMERA{
@@ -18,7 +18,7 @@ public:
   void setDir(double roll, double pitch, double yaw);
   void setDir(aVec dir, double roll=0);
   void setPos(aVec p);
-  virtual IMAGE *snap(MODEL &m)=0;
+  virtual IMAGE *snap(LOS &m)=0;
   aVec unitVector(double t, double p);
 protected:
   aVec pos;
