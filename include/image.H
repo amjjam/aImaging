@@ -77,3 +77,6 @@ double poidiff(const IMAGE &i1, const IMAGE &i2);
 double average(const IMAGE &i);
 
 #endif
+
+
+
