@@ -16,3 +16,4 @@ uninstall:
 	- rm -f $(includedir)/aImaging.H
 
 clean:
+	- rm -f aImaging.H
