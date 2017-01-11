@@ -61,5 +61,5 @@ double LOSGSLQAG::los(const aVec &s, const aVec &dd) const{
   ===========================================================================*/
 double LOSGSLQAG_integrand(double x, void *pp){
   LOSGSLQAG_params *p=(LOSGSLQAG_params *) pp;
-  return p->integrand->val(p->start+p->dir*x);
+  return p->integrand->value(p->start+p->dir*x);
 }
