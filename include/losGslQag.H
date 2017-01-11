@@ -21,9 +21,9 @@ private:
   gsl_integration_workspace *workspace;
   double epsabs;
   double epsrel;
-  double losStart(const aVec &s, const aVec &d) const;
-  double losStop(const aVec &s, const aVec &d) const;
-  double losStep(const aVec &s, const aVec &d) const;
+  double losStart(const aVec &s, const aVec &d) const =0;
+  double losStop(const aVec &s, const aVec &d) const =0;
+  double losStep(const aVec &s, const aVec &d) const =0;
 };
 
 struct LOSGSLQAG_params{
